@@ -12,6 +12,7 @@
     <input type="text" id="num2" placeholder="숫자입력...">
     <span>=</span>
     <strong id="result">0</strong>
+    <button onclick="clearall()">clear</button>
     <script>
         // + 버튼을 누르면 호출되는 함수
         function plus(){
@@ -23,6 +24,11 @@
         var b = document.querySelector("#num2").value;
         var result=parseFloat(a)+parseFloat(b);
         document.querySelector("#result").innerText=result;
+        }
+        function clearall(){
+            var c = document.querySelector("#num1").value="";
+            var d = document.querySelector("#num2").value="";
+            document.querySelector("#result").innerText=0;
         }
     </script>
 </body>
