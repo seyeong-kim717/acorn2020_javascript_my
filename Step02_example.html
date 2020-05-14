@@ -25,8 +25,9 @@
         var result=parseFloat(a)+parseFloat(b);
         document.querySelector("#result").innerText=result;
         }
+        //clear 버튼을 누르면 호출 되는 함수
         function clearall(){
-            var c = document.querySelector("#num1").value="";
+            var c = document.querySelector("#num1").value="";// ""을 값으로 넣게 되면 원상태로 돌아간다.
             var d = document.querySelector("#num2").value="";
             document.querySelector("#result").innerText=0;
         }
