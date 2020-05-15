@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_function2.html</title>
+</head>
+<body>
+    <h1>function type 테스트 중...</h1>
+    <script>
+        keepBeer();
+        
+        function keepBeer() {
+            console.log("냉장고 문을 연다.");
+            console.log("맥주를 넣는다.");
+            console.log("냉장고 문을 닫는다.");
+        }
+        //함수는 위아래 두개다 가능 하지만 밑에 구조가 더 안전하고 깔끔한 구조이다.
+         var keepBeer2=function(){
+            console.log("냉장고 문을 연다.");
+            console.log("맥주를 넣는다.");
+            console.log("냉장고 문을 닫는다.");
+         };
+    </script>
+</body>
+</html>
