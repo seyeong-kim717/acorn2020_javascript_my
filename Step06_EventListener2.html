@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step06_EventListener2.html</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border: red 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>EventListener 함수 테스트중...</h1>
+    <div id="one" class="box">div1</div>
+    <div id="two" class="box">div2</div>
+    <script>
+        // id 가 one인 div를 click하면 해당 div의 innerText가
+        //"clicked" 로 바뀌도록 해 보세요.
+        document.querySelector("#one").addEventListener("click",function(){
+            this.innerText="clicked!"
+        });
+        // this 예약어 이벤트가 일어난 바로 그요소를 가르킬수 있다.
+        //document.querySelector("#one").innerText="clicked!";
+        //this는 "click" 이벤트가 일어난 바로 그요소의 참조값을 가리킨다.
+
+        document.querySelector("#two").addEventListener("click",function(){
+            this.innerText="clicked!"
+        });
+    </script>
+</body>
+</html>
