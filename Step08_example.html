@@ -22,16 +22,26 @@
 
         document.querySelector("#findBtn")
         .addEventListener("click", function () {
-            var a=document.querySelector("#inputName").value; 
+            var a=document.querySelector("#inputName").value;
+            //검색한 데이터가 존재 하는지 여부
+            var isExist=false;
             for(var i=0; i<friend.length; i++){
                 var tmp=friend[i];
                 if(a == tmp.name){
                     document.querySelector("#console").innerText=tmp.name+tmp.phone+tmp.email;
-                    break;
-                }else{
-                    document.querySelector("#console").innerText=a+"로 검색된 정보는 없습니다.";
-                }               
+                //     break;
+                // }else{
+                //     document.querySelector("#console").innerText=a+"로 검색된 정보는 없습니다.";
+                // } 
+                //검색된 이름이 존재한다고 표시한다.
+                isExist=true;              
             }
+        }
+            if (isExist==false) {
+                document.querySelector("#console").innerText=
+                a+"으로 검색된 정보는 없습니다."
+        }
+
         });
 
         // 버튼을 눌렀을때 실행할 함수 등록.
@@ -40,6 +50,9 @@
         //3. i번째 방의 친구 정보를 불러와서
         // 만일 입력한 이름과 친구 정보에 있는 이름이 같으면
         //  해당 정보를 p 요소에 출력하기
+        // 없는 이름은 없다고 출력
+        // for문 종료 후에 if 문 블럭에 실행순서가 갔었는지
+        //여부를 알고 싶다면??
 
 
     </script>
