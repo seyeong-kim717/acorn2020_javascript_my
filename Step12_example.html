@@ -19,11 +19,17 @@
             와 같은 요소를 동적으로 만들어서 
             ul 요소에 append 해 보세요. (페이지 로딩 시점에)
         */
-        for(let i=0; i<names.length; i++){ // 할수 있어야 함 지금 시점에서. 5월 20일
-            let a=document.createElement("li");
-            a.innerText=names[i];
-            document.querySelector("#friendList").append(a);
-        };
+        // for(let i=0; i<names.length; i++){ // 할수 있어야 함 지금 시점에서. 5월 20일
+        //     let a=document.createElement("li");
+        //     a.innerText=names[i];
+        //     document.querySelector("#friendList").append(a);
+        // };
+
+        names.forEach(function(arr){
+            let b=document.createElement("li");
+            b.innerText=arr;
+            document.querySelector("#friendList").append(b);
+        });
     </script>
 </body>
 </html>
