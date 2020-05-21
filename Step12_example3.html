@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step12_example3.html</title>
+    <style>
+        tbody tr:hover{
+            background-color: cornflowerblue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>createElement 테스트중...</h1>
+    <input type="text" id="inputNum" placeholder="번호입력...">
+    <input type="text" id="inputName" placeholder="이름입력...">
+    <input type="text" id="inputAddr" placeholder="주소입력...">
+    <button id="addBtn">추가</button>
+    <h1>추가된 회원 목록 입니다.</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>이름</th>
+                <th>주소</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        document.querySelector("#addBtn")
+        .addEventListener("click", function () {
+            let td1=document.createElement("td");
+            td1.innerText=document.querySelector("#inputNum").value;
+            let td2=document.createElement("td");
+            td2.innerText=document.querySelector("#inputName").value;
+            let td3=document.createElement("td");
+            td3.innerText=document.querySelector("#inputAddr").value;
+
+            let tr=document.createElement("tr");
+            tr.append(td1);
+            tr.append(td2);
+            tr.append(td3);
+            document.querySelector("tbody").append(tr);
+            
+            
+            tr.addEventListener("click", function(){
+            // let isEx=confirm("삭제할래?");
+            // if(isEx){
+            // this.remove();
+            //     }
+            if(confirm("삭제할래?")){
+                this.remove();
+            }
+            });
+        });
+        //1. 입력한 정보를 읽어와서
+        //2. td요소 3개를 만들어서 innertext에 출력하고
+        //3. tr요소 1개를 만들어서 td를 append하고
+        //4. tobody요소에  tr요소를 append 한다.
+        //5. tr을 클릭했을때 실행할 함수 등록.
+    </script>
+</body>
+</html>
