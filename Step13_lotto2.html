@@ -19,6 +19,8 @@
     <script>
         document.querySelector("#rulletBtn")
         .addEventListener("click", function(){
+            //div안을 빈 상태로 만들기.
+            document.querySelector("#wrapper").innerText="";
             let nums=[];
 
             while(true){
@@ -33,6 +35,11 @@
                 break;
             }
         };
+            //정렬
+            nums.sort(function(a,b){
+                return a-b;
+            });
+
             for(let i=0; i<nums.length; i++){
             //num배열에 있는 숫자를 이용해서 img요소 만들기
             let ball=document.createElement("img");
