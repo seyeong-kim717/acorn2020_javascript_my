@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step13_lotto.html</title>
+    <style>
+        #wrapper img{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>lotto 추첨기 만들기</h1>
+    <button id="rulletBtn">추첨하기</button>
+    <div id="wrapper">
+
+    </div>
+    <script>
+        document.querySelector("#rulletBtn")
+        .addEventListener("click", function(){
+            let nums=[];
+
+            while(true){
+            let lottoNum=parseInt(Math.random()*45)+1;
+            //만일 중복된 값이 없을때
+            if(nums.indexOf(lottoNum) == -1){
+                //배열에 로또 번호를 넣어준다.
+                nums.push(lottoNum);
+            }
+            //만일 nums에 6개의 숫자가 모두 들어갔다면 반복문 탈출
+            if(nums.length==6){
+                break;
+            }
+        };
+            for(let i=0; i<nums.length; i++){
+            //num배열에 있는 숫자를 이용해서 img요소 만들기
+            let ball=document.createElement("img");
+            ball.setAttribute("src","images/lotto-ball-"+nums[i]+".png");
+            //#wrapper div에 추가하기
+            document.querySelector("#wrapper").append(ball);
+            };
+        });
+        
+    </script>
+</body>
+</html>
