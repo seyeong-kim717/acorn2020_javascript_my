@@ -29,7 +29,11 @@
         a
         .addEventListener("click", function () {
            console.log("click!") ;
-           this.remove();
+           var isDel=confirm("삭제 할꺼야?");
+           if (isDel) {
+            this.remove();
+           }
+
         });
         });
 
