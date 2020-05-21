@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step12_example2.html</title>
+    <style>
+        #toDoList li:hover{
+            background-color: aquamarine;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>createElement</h1>
+    <input type="text" id="inputMsg" placeholder="할 일 입력">
+    <button id="addBtn">추가</button>
+    <ul id="toDoList">
+
+    </ul>
+    <script>
+        document.querySelector("#addBtn")
+        .addEventListener("click", function () {
+            let b=document.querySelector("#inputMsg").value;
+            let a=document.createElement("li");
+            a.innerText=b
+            document.querySelector("#toDoList").append(a)
+            
+        a
+        .addEventListener("click", function () {
+           console.log("click!") ;
+           this.remove();
+        });
+        });
+
+        //1. 입력한 할일을 읽어오고
+        //2. li요소를 만들고
+        //3. 만든 li요소에 innerText를 출력하고
+        //4. ul요소에 append되게 한다.!
+        //5. 만든 li요소에 click리스너 함수 등록하기
+    </script>
+</body>
+</html>
