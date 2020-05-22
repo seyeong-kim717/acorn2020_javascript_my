@@ -21,6 +21,7 @@
             </tr>
         </tbody>
     </table>
+    <script src="js/jquery-3.5.1.js"></script>
     <script>
         //td 요소를 만들어서 참조값을 변수 td1에 담기
         let td1=document.createElement("td");
@@ -35,7 +36,11 @@
         tr.append(td2);
         //tbody요소에 위에서 새로 만든 tr요소 append 하기
         document.querySelector("tbody").append(tr);
+        
+        // var td1=$("<td>").text("김구라");
+        // var td2=$("<td>").text("노량진");
 
+        // $("<tr>").append(td1).append(td2).appendTo("tbody")
     </script>
 </body>
 </html>
