@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery03_chainAction.html</title>
+</head>
+<body>
+    <p id="one">p1</p>
+    <p id="two">p2</p>
+    <input type="text" id="three"/>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        //p1의 innerText를 수정하고
+        let p1=document.querySelector("#one");
+        p1.innerText="김구라";
+        //p1의 글자색을 지정하고 싶다.
+        p1.style.color="blue"
+        //p1의 배경색을 지정하고 싶다.
+        p1.style.backgroundColor="green"
+
+        //위와 동일한 동작을 p2에는 jQuery를 활용해서 하기
+        // $("#two").text("김구라");
+        // $("#two").css("color","pink");
+        // $("#two").css("background-color","powderblue");
+
+        //위의 3가지 동작을 chain형식으로 바꾸면 아래와 같다
+        $("#two")
+        .text("김구라")
+        .css("color","pink")
+        .css("background-color", "powderblue");
+
+        //input 요소에 value값을 넣어주는 동작
+        $("#three").val("배주현");
+
+        //innerText값을 읽어오는 동작
+        var result1=$("#one").text();
+        //input 요소의 value값을 읽어오는 동작
+        var result2=$("#three").val();
+    </script>
+</body>
+</html>

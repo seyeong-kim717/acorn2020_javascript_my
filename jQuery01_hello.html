@@ -7,6 +7,7 @@
 </head>
 <body>
     <button id="changeBtn">change!</button>
+    <button id="changeBtn2">change(jQuery활용)</button>
     <p id="one">p1</p>
     <p id="two">p2</p>
     <!-- 외부 javascript 로딩하기 -->
@@ -22,6 +23,13 @@
         // function select(sel) {  //복잡한 작업 반복 위해 함수로 미리 만들어 놓는다. 유틸리티생성
         //     return document.querySelector(sel);
         // }
+        // jQuery를 활용해서 버튼을 click했을때 실행할 함수 등록
+        $("#changeBtn2").on("click", function () {
+            //jQuery를 활용해서 innerText 넣어주기.
+            $("#one").text("김구라");
+            $("#two").text("해골");
+            
+        });
     </script>
 </body>
 </html>
