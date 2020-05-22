@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery01_hello.html</title>
+</head>
+<body>
+    <button id="changeBtn">change!</button>
+    <p id="one">p1</p>
+    <p id="two">p2</p>
+    <!-- 외부 javascript 로딩하기 -->
+    <script src="js/my-util.js"></script>
+    <!-- jQuery 로딩하기 -->
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        select("#changeBtn").addEventListener("click", function(){
+            select("#one").innerText="김구라";
+            select("#two").innerText="해골";
+        });
+
+        // function select(sel) {  //복잡한 작업 반복 위해 함수로 미리 만들어 놓는다. 유틸리티생성
+        //     return document.querySelector(sel);
+        // }
+    </script>
+</body>
+</html>
