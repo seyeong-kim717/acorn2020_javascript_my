@@ -21,12 +21,12 @@
     <script>
         document.querySelector("#addBtn")
         .addEventListener("click", function () {
-            let b=document.querySelector("#inputMsg").value;
-            let a=document.createElement("li");
-            a.innerText=b
-            document.querySelector("#toDoList").append(a)
+            let a=document.querySelector("#inputMsg").value;
+            let b=document.createElement("li");
+            b.innerText=a
+            document.querySelector("#toDoList").append(b)
             
-        a
+        
         .addEventListener("click", function () {
            console.log("click!") ;
            var isDel=confirm("삭제 할꺼야?");
