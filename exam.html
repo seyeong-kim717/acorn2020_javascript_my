@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exam.html</title>
+</head>
+<body>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+    <div id="one">
+    <!-- 이미지 삽입 -->
+    </div>
+    <button id="startBtn">작업시작</button>
+    <script>
+        console.log("hello~"); //세미콜론! 문자열 주의
+        //페이지 로딩 되는 시점 script영역
+        document.querySelector("#startBtn")
+        .addEventListener("click", function () {
+        });//버튼 을 눌렀을때의 시점.
+        
+        var items=["강아지", "고양이", "원숭이", "코끼리", "돌고래"]
+
+        for(var i=0; i<items.length; i++){
+        //     //반복문 방의 갯수만큼 반복 일어난다. 배열에서 많이 쓰인다. 지금은 페이지 로딩 시점.!
+        //     console.log("babo");
+            // items[i];
+            var tt=items[i];//변수에 담을때
+            // alert(items[i]); //알림창
+            // console.log(items[i]);//콘솔 출력
+        };
+
+        // var divs=document.querySelectorAll("div");        // 배열을 의미 All은
+        // for(var i=0; i<divs.length; i++){
+        //     divs[i].innerText="xxx";
+        // };
+
+        var img=document.createElement("img");
+        img.setAttribute("src", "images/1.jpg");
+        document.querySelector("#one").append(img);
+
+        var p=document.createElement("p");
+        p.setAttribute("class","test");
+        p.innerText="abcd";
+        document.querySelector("#one").append(p);
+    
+    </script>
+</body>
+</html>
